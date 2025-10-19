@@ -1,7 +1,7 @@
 # Сума двох чисел: Написати програму, яка зчитує два цілих числа та виводить їх суму.
-# n1 = int(input ("Enten number_1: "))
-# n2 = int(input ("Enten number_2: "))
-# print("Сума чисел =" + str(n1 + n2))
+n1 = int(input ("Enten number_1: "))
+n2 = int(input ("Enten number_2: "))
+print("Сума чисел =" + str(n1 + n2))
 # Гіпотенуза: За двома катетами прямокутного трикутника знайти довжину його гіпотенузи.
 # k1 = float(input ("Katet1: "))
 # k2 = float(input ("Katet2: "))
