@@ -140,23 +140,66 @@
 #  B
 #  The distance is the same 
 # Вводяться координати (x, y) точки A і радіус кола (r). Визначити, чи належить дана точка колу, якщо його центр знаходиться в початку координат.
-# Вхідні дані:
-# 3
-# 4
-# 5
-# -2
-# 5
-# 3
+# x =  int(input("Enter x : "))
+# y =  int(input("Enter y : "))
+# r =  int(input("Enter radius : "))
+# if (x ** 2 + y ** 2)**(1/2) >= r:
+#     print("The point belongs to the circle")
+# else:
+#     print("The point is outside the circle")
 
 
-
-# Вихідні дані:
-# The point belongs to the circle
-# The point is outside the circle
 # Дано натуральное число. Визначити, чи закінчується число парною цифрою.
+# number = int(input("Enter number : "))
+# if number % 2 == 0:
+#     print(True)
+# else:
+#     print(False)
+
+
+# Напишіть програму для знаходження коренів квадратного рівняння a*x2 + b*x + c = 0. Користувач вводить значення коефіцієнтів a, b, c. У вхідних даних наведено три пари вхідних значень коефіцієнтів, а у вихідних даних - відповідні повідомлення про кількість коренів або їх відсутність.
+# a =  int(input("Enter a : "))
+# b =  int(input("Enter b : "))
+# c =  int(input("Enter c : "))
+# d = b ** 2 - 4 * a * c
+# if d > 0:
+#     x1 = (- b - (b**2 -4 * a * c)**(1/2)) / (2 * a) 
+#     x2 = (- b + (b**2 -4 * a * c)**(1/2)) / (2 * a)
+#     print("Корені рівняння дорівнює" + " X1 = " + str(x1) + ";" + " X2 = " + str(x2))
+# elif d == 0:
+#     x = -b / (2 * a)    
+#     print("Корінь рівняння дорівнює" + " X1 = " + str(x))
+# else:
+#     print("Корені не знайдено")
+
+
+# Напишіть програму, щоб визначити, чи задане ціле число (вводиться користувачем) парне або непарне.
+# \
+
 # Вхідні дані:
-# 1234
-# 35
+# 2
+# 5
+# 11
 # Вихідні дані:
 # True
 # False
+# False
+
+# Відомі рік і номер місяця народження людини, а також рік і номер місяця сьогоднішнього дня (січень - 1 і т. д.). Визначити вік людини (число повних років). У разі збігу вказаних номерів місяців вважати, що пройшов повний рік.
+# Вхідні дані:
+# 1998
+# 3
+# 2018
+# 2
+# Вихідні дані:
+# # 19
+# month_birthday =  int(input("Enter month of birth: "))
+# year_birthday =  int(input("Enter year of birth: "))
+# today_month = int(input("Enter today's year: "))
+# today_year = int(input("Enter today's month: "))
+# age = today_year - year_birthday
+# if today_month >= month_birthday:
+#     print("Ваш вік становить ", int(age +1))
+# else:
+#     print("Ваш вік становить ", age)
+
