@@ -192,5 +192,5 @@
 # join_a = "".join(map(str, result)) #збираємо назад в рядок та переводимо в число
 # print(join_a)
 # number = "".join(reversed(join_a)) #перебираємо рядок в зроротньому напрямі
-# print(int(number)) #переводимо в число та друкуємо
+# print(int(number)) #переводимо в число та друкуємо 
 
