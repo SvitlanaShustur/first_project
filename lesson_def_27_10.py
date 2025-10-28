@@ -183,6 +183,7 @@ def number_tickets(a, b, c):
     return total
 
 # def sum_tickets(sam_)
+тт
 
 amount_ticket_a = int(input("Введіть числа куплених місць класу А: "))
 amount_ticket_b = int(input("Введіть числа куплених місць класу B: "))
