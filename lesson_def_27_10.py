@@ -171,23 +171,36 @@
 
 # ({'A': 922.5, 'B': 472.5, 'C': 158.25}, 1553.25)
 
-def number_tickets(a, b, c):
-    ticket_a = a
-    ticket_b = b
-    ticket_c = c
-    total = a + b +c
+# def number_tickets(a, b, c):
     
-    print(ticket_a)
-    print(ticket_b)
-    print(ticket_c)
-    return total
+#     total = a + b + c
+    
+#     print(f"Кількість білетів класу А {a}")
+#     print(f"Кількість білетів класу B {b}")
+#     print(f"Кількість білетів класу C {c}")
+#     return total
 
-# def sum_tickets(sam_)
-тт
+# def sum_tickets(a, b, c, p1, p2, p3):
+#     sum_a = a * p1
+#     sum_b = b * p2
+#     sum_c = c * p3
+#     total_prace = sum_a + sum_b + sum_c
 
-amount_ticket_a = int(input("Введіть числа куплених місць класу А: "))
-amount_ticket_b = int(input("Введіть числа куплених місць класу B: "))
-amount_ticket_c = int(input("Введіть числа куплених місць класу C: "))
+#     print(f"Вартість білетів класу А {sum_a}")          
+#     print(f"Вартість білетів класу B {sum_b}")
+#     print(f"Вартість білетів класу C {sum_c}")
+#     return total_prace
 
-total_tickets = number_tickets(amount_ticket_a, amount_ticket_b, amount_ticket_c)
-print(total_tickets)
+
+# ticket_a = int(input("Введіть числа куплених місць класу А: "))
+# ticket_b = int(input("Введіть числа куплених місць класу B: "))
+# ticket_c = int(input("Введіть числа куплених місць класу C: "))
+
+# sum_ticket_a = float(input("Введіть вартість квитка класу А: "))
+# sum_ticket_b = float(input("Введіть чвартість квитка класу B: "))
+# sum_ticket_c = float(input("Введіть вартість квитка класу C: "))
+
+# total_tickets = number_tickets(ticket_a, ticket_b, ticket_c)
+# print(f"Загальна кількість проданих білетів {total_tickets}")
+# total_prace = sum_tickets(ticket_a, ticket_b, ticket_c, sum_ticket_a, sum_ticket_b, sum_ticket_c)
+# print(f"Загальна сума проданих білетів {total_prace}")
