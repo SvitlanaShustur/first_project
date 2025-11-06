@@ -204,3 +204,43 @@
 # print(f"Загальна кількість проданих білетів {total_tickets}")
 # total_prace = sum_tickets(ticket_a, ticket_b, ticket_c, sum_ticket_a, sum_ticket_b, sum_ticket_c)
 # print(f"Загальна сума проданих білетів {total_prace}")
+
+
+# FACTOTIAL
+# def factprial(n):
+#     if n == 1:
+#         return 1
+#     return n * factprial(n-1)
+# print(factprial(5))
+
+def sum_numbers(a, b):
+    return a + b
+
+def sqr(a, b):
+    return sum_numbers(a, b) ** 2
+
+# print(sqr(2, 7))
+#-----------------------------------------------------
+# 13.Напишіть рекурсивну функцію, яка обчислює суму цілих чисел a і b. З арифметичних операцій використовується тільки додавання одиниці і віднімання одиниці.
+#task13():
+def add_number(a, b):
+    if b == 0:
+        return a
+    return helper(a + 1, b -1)
+
+def helper(a, b):
+    if b == 0:
+        return a
+    return add_number(a + 1, b - 1)
+print(add_number(5, 4))
+
+
+#-----------------------------------------------------
+# 14 Дано послідовність цілих чисел, що закінчується числом 0. Напишіть рекурсивну функцію, яка друкує цю послідовність в зворотному порядку. При розв’язуванні цього завдання не можна користуватися списками.
+
+while True:
+    n = int(input("Enter numbers: "))
+    if n == 0:
+        break
+    def  print_number():
+        

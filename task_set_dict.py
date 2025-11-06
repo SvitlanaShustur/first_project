@@ -1,227 +1,227 @@
 # Beginner level
 #--------------------------------------------------------------------------------
-# 1.Створіть словник зі списками добрих справ на сьогодні і на завтра. Надрукуйте із словника добрі справи, які плануєш зробити сьогодні і взавтра.
-def task1():
-    to_do = {
-        "today": ["read", "clear", "dog"],
-        "tomorrow": ["read", "call my mom"]
-    }
-    # print(to_do)
-    print("To do for today")
-    for item in to_do["today"]:
-        print("-", item)
-    print("To do for tomorrow")
-    for item in to_do["tomorrow"]:
-        print("-", item)
-# task1()
-#--------------------------------------------------------------------------------
-# 2. Припустимо, що у нас є словник, в якому ключі є ідентифікаторами, а значення – іменами користувачів. Напишіть програму, яка виводить вітальне повідомлення користувачу на основі його ідентифікатора. Якщо ідентифікатор відсутній у словнику, виводиться вітання для усіх користувачів.
+# # 1.Створіть словник зі списками добрих справ на сьогодні і на завтра. Надрукуйте із словника добрі справи, які плануєш зробити сьогодні і взавтра.
+# def task1():
+#     to_do = {
+#         "today": ["read", "clear", "dog"],
+#         "tomorrow": ["read", "call my mom"]
+#     }
+#     # print(to_do)
+#     print("To do for today")
+#     for item in to_do["today"]:
+#         print("-", item)
+#     print("To do for tomorrow")
+#     for item in to_do["tomorrow"]:
+#         print("-", item)
+# # task1()
+# #--------------------------------------------------------------------------------
+# # 2. Припустимо, що у нас є словник, в якому ключі є ідентифікаторами, а значення – іменами користувачів. Напишіть програму, яка виводить вітальне повідомлення користувачу на основі його ідентифікатора. Якщо ідентифікатор відсутній у словнику, виводиться вітання для усіх користувачів.
 
-# Вхідні дані:
+# # Вхідні дані:
 
-# 232
-# 550
-# 190
-# 500
-# Вихідні дані:
+# # 232
+# # 550
+# # 190
+# # 500
+# # Вихідні дані:
 
-# Hi, Alice!
-# Hi, Bob!
-# Hi, Jack!
-# Hi, to all!
+# # Hi, Alice!
+# # Hi, Bob!
+# # Hi, Jack!
+# # Hi, to all!
 
-def task2():
-    users = {
-        0: "Alica",
-        1: "Bob",
-        2: "Jack"
-    }
-    usser_id = int(input("Your id: "))
-    if usser_id in users:
-        print(f"Hello,{users[usser_id]}")
-    else:
-        print(f"Hello, to all")
-# task2()
-#--------------------------------------------------------------------------------
-# 3. Напишіть програму для сортування за зростанням (за алфавітом) словника за ключами. Словник зберігає пари ключ-значення у вигляді «назва фільму: рік релізу». Інформація виводиться як у вихідних даних: сортування має бути проведено за назвами фільмів.
+# def task2():
+#     users = {
+#         0: "Alica",
+#         1: "Bob",
+#         2: "Jack"
+#     }
+#     usser_id = int(input("Your id: "))
+#     if usser_id in users:
+#         print(f"Hello,{users[usser_id]}")
+#     else:
+#         print(f"Hello, to all")
+# # task2()
+# #--------------------------------------------------------------------------------
+# # 3. Напишіть програму для сортування за зростанням (за алфавітом) словника за ключами. Словник зберігає пари ключ-значення у вигляді «назва фільму: рік релізу». Інформація виводиться як у вихідних даних: сортування має бути проведено за назвами фільмів.
 
-# Вихідні дані:
+# # Вихідні дані:
 
-# ('Avengers: Endgame', 2019) ('Guardians of the Galaxy', 2014) ('Iron Man', 2008) ('Thor', 2011)
-def task3():
-    films = {
-        'Iron Man': 2008,
-        'Avengers: Endgame': 2019,
-        'Thor': 2011,
-        'Guardians of the Galaxy': 2014
-    }
-    sorted_fils = dict(sorted(films.items()))
-    print(films)
-    print(sorted(films.items()))
-    print(sorted_fils)
-    for name, year in sorted_fils.items():
-        print(f"('{name}': {year})")
-# task3()
-#--------------------------------------------------------------------------------
-# 4. Надрукуйте елементи словника, де ключі - це числа від '1' до 'n' (обидва числа включно), а значення - квадрати ключів. 'n' – ціле число, яке вводить користувач.
-def task4():
-    n = int(input("n: "))
-    squares = {} # перший варіант
-    for i in range(1, n+1):
-        squares[i] = i ** 2
-    squares = {i: i ** 2 for i in range(1, n+1)} # другий варіант
-    print(squares)
-# task4()
+# # ('Avengers: Endgame', 2019) ('Guardians of the Galaxy', 2014) ('Iron Man', 2008) ('Thor', 2011)
+# def task3():
+#     films = {
+#         'Iron Man': 2008,
+#         'Avengers: Endgame': 2019,
+#         'Thor': 2011,
+#         'Guardians of the Galaxy': 2014
+#     }
+#     sorted_fils = dict(sorted(films.items()))
+#     print(films)
+#     print(sorted(films.items()))
+#     print(sorted_fils)
+#     for name, year in sorted_fils.items():
+#         print(f"('{name}': {year})")
+# # task3()
+# #--------------------------------------------------------------------------------
+# # 4. Надрукуйте елементи словника, де ключі - це числа від '1' до 'n' (обидва числа включно), а значення - квадрати ключів. 'n' – ціле число, яке вводить користувач.
+# def task4():
+#     n = int(input("n: "))
+#     squares = {} # перший варіант
+#     for i in range(1, n+1):
+#         squares[i] = i ** 2
+#     squares = {i: i ** 2 for i in range(1, n+1)} # другий варіант
+#     print(squares)
+# # task4()
 
-#--------------------------------------------------------------------------------
-# 5. Створіть словник, в кому ключі – назви днів тижня, а значення - цілі числа, що позначають порядковий номер дня тижня від 0 до 6. Надрукуйте назву дня за введеним порядковим номером дня. Якщо введений номер виходить за межі, програма жодних повідомлень не друкує і не повідомляє про помилку.
+# #--------------------------------------------------------------------------------
+# # 5. Створіть словник, в кому ключі – назви днів тижня, а значення - цілі числа, що позначають порядковий номер дня тижня від 0 до 6. Надрукуйте назву дня за введеним порядковим номером дня. Якщо введений номер виходить за межі, програма жодних повідомлень не друкує і не повідомляє про помилку.
 
-def task5():
-    weeks = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
-    days = [i for i in range(7)]
-    # Var 1
-    week_dict = {}
-    # for day in range(7):
-    #     week_dict[weeks[day]] = days[day]
-    # Var 2
-    week_dict = {weeks[day]: days[day] for day in range(7)}
-    print(week_dict)
+# def task5():
+#     weeks = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+#     days = [i for i in range(7)]
+#     # Var 1
+#     week_dict = {}
+#     # for day in range(7):
+#     #     week_dict[weeks[day]] = days[day]
+#     # Var 2
+#     week_dict = {weeks[day]: days[day] for day in range(7)}
+#     print(week_dict)
 
-    # Var 3
-    # zip(keys, values)
-        # zip(список_ключів, список_значень)
-        # списки ключів та значень повинні співпадати за розміром!!
-    # week_dict = dict(zip(weeks, days))
-    # print(week_dict)
+#     # Var 3
+#     # zip(keys, values)
+#         # zip(список_ключів, список_значень)
+#         # списки ключів та значень повинні співпадати за розміром!!
+#     # week_dict = dict(zip(weeks, days))
+#     # print(week_dict)
         
-    # n = int(input("Введи номер: "))
-    # for day, number in week_dict.items():
-    #     if number == n:
-    #         print(day)
-    #         break
-# task5()
-#--------------------------------------------------------------------------------
-# 6. Напишіть програму для створення словника із введеного рядка символів для підрахунку кількості символів.
+#     # n = int(input("Введи номер: "))
+#     # for day, number in week_dict.items():
+#     #     if number == n:
+#     #         print(day)
+#     #         break
+# # task5()
+# #--------------------------------------------------------------------------------
+# # 6. Напишіть програму для створення словника із введеного рядка символів для підрахунку кількості символів.
 
-# Вхідні дані:
+# # Вхідні дані:
 
-# Lorem ipsum dolor sit amet
-# Вихідні дані:
+# # Lorem ipsum dolor sit amet
+# # Вихідні дані:
 
-# {'L': 1, 'o': 3, 'r': 2, 'e': 2, 'm': 3, ' ': 4, 'i': 2, 'p': 1, 's': 2, 'u': 1, 'd': 1, 'l': 1, 't': 2, 'a': 1}
-def task6():
-    text = "Lorem ipsum dolor sit amet"
-    my_text = list(text) # роздили на символи
-    text_length = len(my_text) # рахуємо дліну
-    let_count = {}
-    for i in my_text:
-        if i in let_count:
-            let_count[i] += 1
-        else:
-            let_count[i] = 1
-    print(let_count)
-    count = [i for i in range(text_length)]
-    my_dict = dict(zip(my_text, count)) #зробили сорвник длz всіх букв
-    print(my_dict)
-# task6()
+# # {'L': 1, 'o': 3, 'r': 2, 'e': 2, 'm': 3, ' ': 4, 'i': 2, 'p': 1, 's': 2, 'u': 1, 'd': 1, 'l': 1, 't': 2, 'a': 1}
+# def task6():
+#     text = "Lorem ipsum dolor sit amet"
+#     my_text = list(text) # роздили на символи
+#     text_length = len(my_text) # рахуємо дліну
+#     let_count = {}
+#     for i in my_text:
+#         if i in let_count:
+#             let_count[i] += 1
+#         else:
+#             let_count[i] = 1
+#     print(let_count)
+#     count = [i for i in range(text_length)]
+#     my_dict = dict(zip(my_text, count)) #зробили сорвник длz всіх букв
+#     print(my_dict)
+# # task6()
 
-def task6_1():
-    text = "Lorem ipsum dolor sit amet"
-    letters = {i: text.count(i) for i in text}
-    print(letters)
+# def task6_1():
+#     text = "Lorem ipsum dolor sit amet"
+#     letters = {i: text.count(i) for i in text}
+#     print(letters)
 
-# task6_1()
-#--------------------------------------------------------------------------------
-# 7. Напишіть програму, яка приймає рядок символів, і обчислює кількість букв і цифр.
+# # task6_1()
+# #--------------------------------------------------------------------------------
+# # 7. Напишіть програму, яка приймає рядок символів, і обчислює кількість букв і цифр.
 
-# Вхідні дані:
+# # Вхідні дані:
 
-# Project Gutenberg offers over 59,000 free eBooks
-# Вихідні дані:
+# # Project Gutenberg offers over 59,000 free eBooks
+# # Вихідні дані:
 
-# LETTERS 36
-# DIGITS 5
-def tack7():
-    text = "Project Gutenberg offers over 59,000 free eBooks"
-    my_text = list(text)
-    # print(my_text)
-    let_dict = {} # створюємо словник
-    for i in my_text:
-        if i == " ": # не рахуємо пробіли
-            continue
-        if i ==",": # не рахуємо коми
-            continue
-        if i in let_dict:
-            let_dict[i] += 1 # рахумо кільксть входжень
-        else:
-            let_dict[i] = 1 # рахумо кільксть входжень
+# # LETTERS 36
+# # DIGITS 5
+# def tack7():
+#     text = "Project Gutenberg offers over 59,000 free eBooks"
+#     my_text = list(text)
+#     # print(my_text)
+#     let_dict = {} # створюємо словник
+#     for i in my_text:
+#         if i == " ": # не рахуємо пробіли
+#             continue
+#         if i ==",": # не рахуємо коми
+#             continue
+#         if i in let_dict:
+#             let_dict[i] += 1 # рахумо кільксть входжень
+#         else:
+#             let_dict[i] = 1 # рахумо кільксть входжень
 
-    digit_dict = {} # створюємо словник
-    for n in text:
-        if n.isdigit():  # якщо символ — цифра
-            if n in digit_dict:
-                digit_dict[n] += 1 # рахумо кільксть входжень
-            else:
-                digit_dict[n] = 1 # рахумо кільксть входжень
+#     digit_dict = {} # створюємо словник
+#     for n in text:
+#         if n.isdigit():  # якщо символ — цифра
+#             if n in digit_dict:
+#                 digit_dict[n] += 1 # рахумо кільксть входжень
+#             else:
+#                 digit_dict[n] = 1 # рахумо кільксть входжень
 
-    print(f"Створюємо словник букв {let_dict}") # загальна кількість знаків у реченні
-    print(f"Створюємо словник цифр {digit_dict}") # загальна кількість знаків у реченні
-    digit_dict_l = len(digit_dict)
-    let_dict_l = len(let_dict)
-    print(f"Кількість цифр {digit_dict_l}, кількіcть букв {let_dict_l}")
-# tack7()
+#     print(f"Створюємо словник букв {let_dict}") # загальна кількість знаків у реченні
+#     print(f"Створюємо словник цифр {digit_dict}") # загальна кількість знаків у реченні
+#     digit_dict_l = len(digit_dict)
+#     let_dict_l = len(let_dict)
+#     print(f"Кількість цифр {digit_dict_l}, кількіcть букв {let_dict_l}")
+# # tack7()
 
-def tack7_1():
-    text = "Project Gutenberg offers over 59,000 free eBooks"
+# def tack7_1():
+#     text = "Project Gutenberg offers over 59,000 free eBooks"
 
-    number_count = 0
-    alpha_count = 0
+#     number_count = 0
+#     alpha_count = 0
 
-    for ch in text:
-        if ch.isdigit():
-            number_count += 1
-        elif ch.isalpha():
-            alpha_count += 1
+#     for ch in text:
+#         if ch.isdigit():
+#             number_count += 1
+#         elif ch.isalpha():
+#             alpha_count += 1
 
 
-    result = {
-        "LETTERS": alpha_count,
-        "DGIGITS": number_count
-    }
+#     result = {
+#         "LETTERS": alpha_count,
+#         "DGIGITS": number_count
+#     }
 
-    # print(result)
+#     # print(result)
 
-    for key, value in result.items():
-        print(key, value)
-# tack7_1()
+#     for key, value in result.items():
+#         print(key, value)
+# # tack7_1()
     
-#--------------------------------------------------------------------------------
-# Middle level
+# #--------------------------------------------------------------------------------
+# # Middle level
 
-#--------------------------------------------------------------------------------
-# 8. Напишіть програму для видалення дублікатів зі списку цілих чисел.
-def tack8():
-    numbers = [4, 2, 33, 56, 7, 88, 9, 4, 3, 2, 2, 88, 9]
-    numbers_set = set(numbers)
-    print(numbers_set)
-# tack8()
+# #--------------------------------------------------------------------------------
+# # 8. Напишіть програму для видалення дублікатів зі списку цілих чисел.
+# def tack8():
+#     numbers = [4, 2, 33, 56, 7, 88, 9, 4, 3, 2, 2, 88, 9]
+#     numbers_set = set(numbers)
+#     print(numbers_set)
+# # tack8()
 
 #--------------------------------------------------------------------------------
 # 9. Дано список словників. Кожен словники має 2 пари елементів: ключ 'name' і значення імені студента, ключ 'points' і значення - список балів з різних дисциплін (цілі двоцифрові числа). Надрукуйте найменші значення балів, отримані кожним студентом, в один рядок з пропуском.
 
 #--------------------------------------------------------------------------------
 # 10.Дано два списки чисел. Порахуйте, скільки унікальних цифр міститься в обох з них.
-def tack10():
-    numbers1 = [1, 5, 3, 8, 0, 1]
-    numbers2 = [23, 9, 0, 1, 5]
+# #def tack10():
+#     numbers1 = [1, 5, 3, 8, 0, 1]
+#     numbers2 = [23, 9, 0, 1, 5]
 
-    result = len(set(numbers1 + numbers2))
-    print(result)
+#     result = len(set(numbers1 + numbers2))
+#     print(result)
 
-# tack10()
-numbers1 = {1, 5, 3, 8, 0}
-numbers2 = {23, 9, 0, 1, 5}
-
+# # tack10()
+# numbers1 = {1, 5, 3, 8, 0}
+# numbers2 = {23, 9, 0, 1, 5}
+# #tack10()
 # # об'єднання множин
 # print(numbers1.union(numbers2)) # об'єднання множин
 # print(numbers1 | numbers2) # об'єднання множин
@@ -246,7 +246,12 @@ numbers2 = {23, 9, 0, 1, 5}
 
 #--------------------------------------------------------------------------------
 # 11. Дано три словники, в яких ключами є малі букви латинського алфавіту, а значеннями - цілі числа. Ключі у всіх словниках – різні, їх є по 3 в кожному словнику. Об’єднайте всі три словники в один і виведіть його вміст. Підказка. скористайтеся оператором **, що використовується для об’єднання довільної кількості словників.
+# a = {"a": 1, "b": 2, "c": 3}
+# b = {"d": 4, "e": 5, "f": 6}
+# c = {"g": 7, "h": 8, "j": 9}
 
+# d = {**a, **b, **c}
+# print(d)
 #--------------------------------------------------------------------------------
 # 12. Створіть словник, який відображає ідентифікатори акцій на біржі. Ключами словника є ідентифікатори акцій, а значеннями - дійсні числа - ціни акцій. Надрукуйте ціни акцій та ідентифікатори у порядку зростання ціни.
 
@@ -257,6 +262,55 @@ numbers2 = {23, 9, 0, 1, 5}
 # 45.23 ACME
 # 205.55 IBM
 # 612.78 AAPL
+
+
+# def task12_1():
+#     stocks = {
+#         "IBM": 05.55, 
+#         "AAPL": 612.78,
+#         "FB": 10.75,
+#         "HPQ": 37.2,
+#         "ACME": 45.23,
+#         "FB": 10.75
+#         }
+
+#     def get_value(item):
+#         return item[1]
+
+#     print(stocks.items())
+#     print(sorted(stocks.items(), key=get_value))
+
+#     for key, value in sorted(stocks.items(), key=get_value):
+#         print(value, key)
+
+# # task12_1()
+# # Функція, що повертає значення (другий елемент пари ключ-значення)
+# # Використовується для сортування за ціною
+# def get_value(item):
+#     return item[1]
+# def task12():
+#         # Створюємо словник 'stocks', де ключ — це назва компанії, а значення — ціна акцій
+#     stocks = {
+#         "IBM": 05.55,     # значення 05.55 = 5.55 (нуль попереду не впливає)
+#         "AAPL": 612.78,
+#         "FB": 10.75,      # ключ "FB" повторюється, тому збережеться лише останній
+#         "HPQ": 37.2,
+#         "ACME": 45.23,
+#         "FB": 10.75       # цей запис перезапише попередній "FB"
+#     }
+
+
+#     # Виводимо усі пари ключ-значення у вигляді об’єкта dict_items
+#     print(stocks.items())
+
+#     # Сортуємо пари (ключ, значення) за значенням (тобто за ціною)
+#     print(sorted(stocks.items(), key=get_value))
+
+#     # Проходимо циклом по відсортованих елементах і виводимо ціну та назву компанії
+#     for key, value in sorted(stocks.items(), key=get_value):
+#         print(value, key)
+# task12()
+#--------------------------------------------------------------------------------
 # 13.  В рядку записаний текст. Словом вважається послідовність непробільних символів, які йдуть підряд, слова розділені одним або більшим числом пропуском або символами кінця рядка. Для кожного слова з цього тексту підрахуйте, скільки разів воно зустрічалося в цьому тексті раніше.
 
 # Вхідні дані:
@@ -265,6 +319,21 @@ numbers2 = {23, 9, 0, 1, 5}
 # Вихідні дані:
 
 # 0 0 0 0 1 1 2 0 1
+
+daten = "0 0 0 0 1 1 2 0 1".split()
+
+# daten_set = set(daten)
+# print(daten_set)
+def task13():
+    result = {} 
+    for s in daten:
+        if s in result:
+            result[s] += 1
+        else:
+            result[s] = 1
+
+    print(result)
+# task13()
 
 #--------------------------------------------------------------------------------
 # Hard level
@@ -283,7 +352,17 @@ numbers2 = {23, 9, 0, 1, 5}
 # abc 1
 # ac 1
 # bcd 1
+# def task14():
+#     text = "a bb acD bb abc ac BCD a".lower().split()
+#     print(text)
 
+#     result = {}
+#     for word in text:
+#         # result[word]  = text.count(word) 
+#         result[word] = result.get(word, 0) + 1
+#     for key, value in result.items():
+#         print(key, value)
+# task14()
 #--------------------------------------------------------------------------------
 # 15. Дано два списки чисел. Знайдіть всі числа, що зустрічаються як в першому, так і другому списках, і надрукуйте їх у порядку зростання.
 
@@ -294,14 +373,37 @@ numbers2 = {23, 9, 0, 1, 5}
 # Вихідні дані:
 
 # 5 8 11
-
+# # def task15():
+# a = "2 5 8 11 10 9".split(" ")
+# b = "11 3 7 6 8 5".split(" ")
+# a = set(a)
+# b = set(b)
+# d = a & b
+# print(d)
+# # task15()
 #--------------------------------------------------------------------------------
 # 16. Напишіть програму, яка вміє шифрувати і розшифровувати використовуючи шифр підстановки. Програма приймає на вхід два рядки однакової довжини, у першому рядку записані символи початкового алфавіту, у другому рядку - символи кінцевого алфавіту (шифр підстановки), після чого йде рядок, який потрібно зашифрувати переданим шифром підстановки, і ще один рядок, який потрібно розшифрувати. Нехай, наприклад, на вхід програми передано:
 # abcd
 # *d%#
 # abacabadaba
 # #*%*d*%
+def task16():
+    alfavit = "abcd"
+    sign = "*d%#"
 
+    shifr = {}
+
+    for a in range(len(alfavit)):
+        shifr[alfavit[a]] = sign[a]
+    print(shifr)
+
+    text = "cdacb"
+    result = ""
+    for i in text:
+        result +=shifr.get(i)
+
+    print(result)
+# task16()
 #--------------------------------------------------------------------------------
 # 17. Це означає, що символ a вхідного повідомлення замінюється на символ * в шифрі, b замінюється на d, c - на % і d - на #. Потрібно зашифрувати рядок abacabadaba і розшифрувати рядок #*%*d*% за допомогою цього шифру. Отримуємо наступні рядки, які і передаємо на виведення програми:
 # *d*%*d*#*d*
@@ -313,4 +415,20 @@ numbers2 = {23, 9, 0, 1, 5}
 # 44332211
 # Вихідні дані:
 # 12123434
-#
+def task17():
+    alfavit = "abcd"
+    sign = "1234"
+
+    shifr = {}
+
+    for a in range(len(alfavit)):
+        shifr[alfavit[a]] = sign[a]
+    print(shifr)
+
+    text = "abacabadaba"
+    result = ""
+    for i in text:
+        result +=shifr.get(i)
+
+    print(result)
+# task17()
