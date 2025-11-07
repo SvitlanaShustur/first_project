@@ -170,7 +170,7 @@
 # Вихідні дані:
 
 # ({'A': 922.5, 'B': 472.5, 'C': 158.25}, 1553.25)
-
+# # var 1
 # def number_tickets(a, b, c):
     
 #     total = a + b + c
@@ -205,6 +205,31 @@
 # total_prace = sum_tickets(ticket_a, ticket_b, ticket_c, sum_ticket_a, sum_ticket_b, sum_ticket_c)
 # print(f"Загальна сума проданих білетів {total_prace}")
 
+# Var 2
+
+def get_ticket_data():
+    ticket = {}
+    for _ in range(3): 
+        category = input().strip()
+        price = float(input().strip())
+        sold = int(input().strip())
+        ticket[category] = (price, sold)
+
+
+
+        # "  string st   t      ".strip()  
+        # "string st t" - результат
+        '''
+        for i in range(3): # _ символ, який можна використовувати замість змінної циклу, коли цикл використовується лише для кількості повторень, без підстановки значень циклу 
+            print(1)
+
+аналог
+        for _ in range(3):
+            print(1)
+
+        '''
+
+
 
 # FACTOTIAL
 # def factprial(n):
@@ -213,11 +238,11 @@
 #     return n * factprial(n-1)
 # print(factprial(5))
 
-def sum_numbers(a, b):
-    return a + b
+# def sum_numbers(a, b):
+#     return a + b
 
-def sqr(a, b):
-    return sum_numbers(a, b) ** 2
+# def sqr(a, b):
+#     return sum_numbers(a, b) ** 2
 
 # print(sqr(2, 7))
 #-----------------------------------------------------
