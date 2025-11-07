@@ -210,24 +210,47 @@
 def get_ticket_data():
     ticket = {}
     for _ in range(3): 
-        category = input().strip()
-        price = float(input().strip())
-        sold = int(input().strip())
+        category = input("Categoria: ").strip()
+        price = float(input("price: ").strip())
+        sold = int(input("sold: ").strip())
         ticket[category] = (price, sold)
+    return ticket
+    
+# print(get_ticket_data())
+
+def calculate_revenue(tickets):
+    tickets_by_class = {}
+    total = 0
+    # {"a": (3.0, 5)}.items() => ("a", (3.0, 5))
+    # key, value = ("a", (3.0, 5))
+    # key = "a", value = (3.0, 5)
+    # category, (price, sold) = ("a", (3.0, 5))
+    # category = a", (price, sold) = (3.0, 5)
+    # category = a", price = 3.0, sold = 5
+
+    for category, (price, sold) in tickets.items():
+        revenue = price * sold
+        tickets_by_class[category] = revenue
+        total += revenue
+    return tickets_by_class, total
+
+print(calculate_revenue(get_ticket_data()))
+# data = get_ticket_d
+
+ 
 
 
+# "  string st   t      ".strip()  
+# # "string st t" - результат
+# '''
+# for i in range(3): # _ символ, який можна використовувати замість змінної циклу, коли цикл використовується лише для кількості повторень, без підстановки значень циклу 
+#     print(1)
 
-        # "  string st   t      ".strip()  
-        # "string st t" - результат
-        '''
-        for i in range(3): # _ символ, який можна використовувати замість змінної циклу, коли цикл використовується лише для кількості повторень, без підстановки значень циклу 
-            print(1)
+# аналог
+# for _ in range(3):
+#     print(1)
 
-аналог
-        for _ in range(3):
-            print(1)
-
-        '''
+# '''
 
 
 
@@ -248,16 +271,16 @@ def get_ticket_data():
 #-----------------------------------------------------
 # 13.Напишіть рекурсивну функцію, яка обчислює суму цілих чисел a і b. З арифметичних операцій використовується тільки додавання одиниці і віднімання одиниці.
 #task13():
-def add_number(a, b):
-    if b == 0:
-        return a
-    return helper(a + 1, b -1)
+# def add_number(a, b):
+#     if b == 0:
+#         return a
+#     return helper(a + 1, b -1)
 
-def helper(a, b):
-    if b == 0:
-        return a
-    return add_number(a + 1, b - 1)
-print(add_number(5, 4))
+# def helper(a, b):
+#     if b == 0:
+#         return a
+#     return add_number(a + 1, b - 1)
+# print(add_number(5, 4))
 
 
 #-----------------------------------------------------
@@ -267,5 +290,4 @@ print(add_number(5, 4))
 #     n = int(input("Enter numbers: "))
 #     if n == 0:
 #         break
-#     def  print_number():
-
+#  pass
